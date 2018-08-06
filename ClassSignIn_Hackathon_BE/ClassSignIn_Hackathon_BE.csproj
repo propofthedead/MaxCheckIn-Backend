@@ -191,6 +191,7 @@
     <Compile Include="Controllers\ClassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="Controllers\TimeStampsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -202,6 +203,14 @@
     <Compile Include="Migrations\201808061512211_Added Students Controller.cs" />
     <Compile Include="Migrations\201808061512211_Added Students Controller.Designer.cs">
       <DependentUpon>201808061512211_Added Students Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808061521468_Edited User Controller.cs" />
+    <Compile Include="Migrations\201808061521468_Edited User Controller.Designer.cs">
+      <DependentUpon>201808061521468_Edited User Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808061536113_Added Time Stamp Controller.cs" />
+    <Compile Include="Migrations\201808061536113_Added Time Stamp Controller.Designer.cs">
+      <DependentUpon>201808061536113_Added Time Stamp Controller.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Class.cs" />
@@ -303,6 +312,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808061512211_Added Students Controller.resx">
       <DependentUpon>201808061512211_Added Students Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808061521468_Edited User Controller.resx">
+      <DependentUpon>201808061521468_Edited User Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808061536113_Added Time Stamp Controller.resx">
+      <DependentUpon>201808061536113_Added Time Stamp Controller.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

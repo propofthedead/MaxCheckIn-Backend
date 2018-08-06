@@ -6,10 +6,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ClassSignIn_Hackathon_BE.Controllers
 {
-    public class TimeStampsController : ApiController { 
+	[EnableCors(origins: "*", headers: "*", methods: "*")]
+	public class TimeStampsController : ApiController { 
 		private Models.LogDbContext db = new LogDbContext();
 
 

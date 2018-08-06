@@ -1,12 +1,11 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
 namespace ClassSignIn_Hackathon_BE.Models {
-	public class Student {
+	public class TimeStamp {
 		public int Id { get; set; }
 		[Required]
 		public string FirstName { get; set; }
@@ -21,10 +20,13 @@ namespace ClassSignIn_Hackathon_BE.Models {
 		[Required]
 		public bool Active { get; set; } = true;
 
-		[JsonIgnore]
-		public List<Class> Classes { get; set; }
+		public int StudentId { get; set; }
+		public virtual Student Student { get; set; }
 
-		public Student() {
+		public int ClassId { get; set; }
+		public virtual Class Class { get; set; }
+
+		public TimeStamp() {
 		}
 	}
 }

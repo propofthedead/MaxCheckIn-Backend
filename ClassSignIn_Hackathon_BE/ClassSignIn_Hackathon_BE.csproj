@@ -196,6 +196,7 @@
     <Compile Include="Models\Class.cs" />
     <Compile Include="Models\LogDbContext.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\TimeStamp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

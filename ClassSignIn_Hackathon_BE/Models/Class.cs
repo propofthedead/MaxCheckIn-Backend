@@ -12,12 +12,13 @@ namespace ClassSignIn_Hackathon_BE.Models {
 		public DateTime StartDate { get; set; }
 		public DateTime EndDate { get; set; }
 		[Required]
-		public string Location  { get; set; }
+		public string Location { get; set; }
 		[Required]
 		public bool Active { get; set; } = true;
 
 		public List<Student> Students { get; set; }
 
-		public Class() { 
+		public Class() {
+		}
 	}
 }

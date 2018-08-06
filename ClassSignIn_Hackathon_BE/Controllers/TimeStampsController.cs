@@ -58,6 +58,9 @@ namespace ClassSignIn_Hackathon_BE.Controllers
 			};
 		}
 
+		timeStamp.CheckIn = DateTime.Now;
+
+
 		db.TimeStamps.Add(timeStamp);
 		db.SaveChanges();
 		return new JsonResponse {

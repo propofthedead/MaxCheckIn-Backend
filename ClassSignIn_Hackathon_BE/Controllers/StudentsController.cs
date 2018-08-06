@@ -6,10 +6,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ClassSignIn_Hackathon_BE.Controllers
 {
-    public class StudentsController : ApiController { 
+	[EnableCors(origins: "*", headers: "*", methods: "*")]
+	public class StudentsController : ApiController { 
 		private LogDbContext db = new LogDbContext();
 
 			////Authenticate user

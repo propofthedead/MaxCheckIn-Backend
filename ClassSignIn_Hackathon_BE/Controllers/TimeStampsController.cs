@@ -69,8 +69,40 @@ namespace ClassSignIn_Hackathon_BE.Controllers
 		};
 	}
 
-	//CHANGE
-	[HttpPost]
+		//CheckIn/Out
+		[HttpPost]
+		[ActionName("TimeStamp")]
+		public JsonResponse TimeStamp(TimeStamp timeStamp) {
+			if(timeStamp == null) {
+				return new JsonResponse {
+					Result = "Failed",
+					Message = "Create requires an instance of Time Stamp"
+				};
+			}
+			if(!ModelState.IsValid) {
+				return new JsonResponse {
+					Result = "Failed",
+					Message = "Model state is invalid. See data.",
+					Error = ModelState
+				};
+			}
+
+			if (timeStamp.CheckIn == null) {
+				timeStamp.CheckIn = DateTime.Now;
+			} else {
+				timeStamp.CheckOut = DateTime.Now;
+			}
+
+			db.Entry(timeStamp).State = System.Data.Entity.EntityState.Modified;
+			db.SaveChanges();
+			return new JsonResponse {
+				Message = "Change successful.",
+				Data = timeStamp
+			};
+		}
+
+		//CHANGE
+		[HttpPost]
 	[ActionName("Change")]
 	public JsonResponse Change(TimeStamp timeStamp) {
 		if(timeStamp == null) {
@@ -86,6 +118,7 @@ namespace ClassSignIn_Hackathon_BE.Controllers
 				Error = ModelState
 			};
 		}
+
 		db.Entry(timeStamp).State = System.Data.Entity.EntityState.Modified;
 		db.SaveChanges();
 		return new JsonResponse {

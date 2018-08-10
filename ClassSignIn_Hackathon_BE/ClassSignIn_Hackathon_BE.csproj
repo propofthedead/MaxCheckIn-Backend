@@ -226,6 +226,10 @@
     <Compile Include="Migrations\201808061628370_Edited TimeStamp.Designer.cs">
       <DependentUpon>201808061628370_Edited TimeStamp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808061928131_virtual.cs" />
+    <Compile Include="Migrations\201808061928131_virtual.Designer.cs">
+      <DependentUpon>201808061928131_virtual.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Class.cs" />
     <Compile Include="Models\LogDbContext.cs" />
@@ -338,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808061628370_Edited TimeStamp.resx">
       <DependentUpon>201808061628370_Edited TimeStamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808061928131_virtual.resx">
+      <DependentUpon>201808061928131_virtual.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

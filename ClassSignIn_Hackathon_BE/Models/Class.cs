@@ -16,7 +16,8 @@ namespace ClassSignIn_Hackathon_BE.Models {
 		[Required]
 		public bool Active { get; set; } = true;
 
-		public List<Student> Students { get; set; }
+		public List<int> StudentIds { get; set; }
+		public virtual List<Student> Students { get; set; }
 
 		public Class() {
 		}

@@ -153,6 +153,31 @@ namespace ClassSignIn_Hackathon_BE.Controllers
 				};
 			}
 
+		[HttpPost]
+		[ActionName("AddClass")]
+		public JsonResponse AddClass(int stuid, int claid)
+		{
+
+			var student = db.Students.Find(stuid);
+			if (student == null)
+				return new JsonResponse {
+					Result = "Failed",
+					Message = $"No Student have Id of {stuid}"
+				};
+			var cla = db.Classes.Find(claid);
+			if (cla == null)
+				return new JsonResponse {
+					Result = "Failed",
+					Message = $"No Student have Id of {claid}"
+				};
+			student.ClassIds.Add(claid);
+			student.Classes.Add(cla);
+			cla.StudentIds.Add(stuid);
+			cla.Students.Add(student);
+			db.SaveChanges();
+			return new JsonResponse();
+		}
+
 		}
 }
 

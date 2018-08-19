@@ -170,8 +170,6 @@ namespace ClassSignIn_Hackathon_BE.Controllers
 					Result = "Failed",
 					Message = $"No Student have Id of {claid}"
 				};
-			student.ClassIds.Add(claid);
-			student.Classes.Add(cla);
 			cla.StudentIds.Add(stuid);
 			cla.Students.Add(student);
 			db.SaveChanges();

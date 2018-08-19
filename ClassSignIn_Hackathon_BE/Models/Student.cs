@@ -16,15 +16,9 @@ namespace ClassSignIn_Hackathon_BE.Models {
 		public string Email { get; set; }
 		[Required]
 		public string Pin { get; set; }
-		[Required]
-		public bool IsAdmin { get; set; } = false;
+
 		[Required]
 		public bool Active { get; set; } = true;
-
-
-		public List<int> ClassIds { get; set; }
-		[JsonIgnore]
-		public virtual List<Class> Classes { get; set; }
 
 		public Student() {
 		}

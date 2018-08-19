@@ -9,6 +9,7 @@ namespace ClassSignIn_Hackathon_BE.Models {
 		public DbSet<Class> Classes { get; set; }
 		public DbSet<Student> Students { get; set; }
 		public DbSet<TimeStamp> TimeStamps { get; set; }
+		public DbSet<Teacher> Teachers { get; set; }
 
 		public LogDbContext() : base() { }
 		}

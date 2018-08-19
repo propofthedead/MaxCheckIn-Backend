@@ -197,6 +197,7 @@
     <Compile Include="Controllers\ClassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Controllers\TimeStampsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -233,6 +234,10 @@
     <Compile Include="Migrations\201808190428371_teacher rework.cs" />
     <Compile Include="Migrations\201808190428371_teacher rework.Designer.cs">
       <DependentUpon>201808190428371_teacher rework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808190443423_teacher controller.cs" />
+    <Compile Include="Migrations\201808190443423_teacher controller.Designer.cs">
+      <DependentUpon>201808190443423_teacher controller.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Class.cs" />
@@ -353,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808190428371_teacher rework.resx">
       <DependentUpon>201808190428371_teacher rework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808190443423_teacher controller.resx">
+      <DependentUpon>201808190443423_teacher controller.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
